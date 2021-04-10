@@ -1,0 +1,47 @@
+body{
+    background-color: #FA8072;
+}
+
+.container{
+    display: flex;
+    background-color: #f5cedb;
+    width: 70%;
+    height: 35vw;
+    margin-left: 15%;
+    margin-top: 50px;
+    border-radius: 30px;
+    box-shadow: #FFE4E1 10px 9px 9px 10px;
+}
+
+h3{
+    text-align: center;
+    font-size: 45px;
+    color: #f5cedb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 10px;
+} 
+
+.buttons{
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.botao1, .botao2, .botao3, .botao4{
+    width: 130px;
+    height: 45px;
+    background-color: #FA8072;
+    border-color: #FA8072;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f5cedb;
+    border-radius: 12px;
+}
+
+span{
+    padding-left: 40px;
+}
+
+#Lista{
+    padding-top: 60px;
+    text-align: center;
+}
