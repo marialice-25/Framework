@@ -6,19 +6,31 @@ body{
     display: flex;
     background-color: #f5cedb;
     width: 70%;
-    height: 35vw;
+    height: 50vw;
     margin-left: 15%;
     margin-top: 50px;
     border-radius: 30px;
-    box-shadow: #FFE4E1 10px 9px 9px 10px;
+    box-shadow: #FFE4E1 10px 5px 5px 10px;
 }
+
+.container2{
+    display: flex;
+    background-color: #f5cedb;
+    width: 70%;
+    height: 70vw;
+    margin-left: 15%;
+    margin-top: 50px;
+    border-radius: 30px;
+    box-shadow: #FFE4E1 10px 5px 5px 10px;
+}
+
 
 h3{
     text-align: center;
     font-size: 45px;
     color: #f5cedb;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding-top: 10px;
+    padding-top: 20px;
 } 
 
 .buttons{
@@ -26,7 +38,7 @@ h3{
     padding-top: 30px;
 }
 
-.botao1, .botao2, .botao3, .botao4{
+.botao1, .botao2, .botao3, .botao4, .botao5{
     width: 130px;
     height: 45px;
     background-color: #FA8072;
@@ -44,4 +56,20 @@ span{
 #Lista{
     padding-top: 60px;
     text-align: center;
+}
+
+.botoes, input{
+    margin-left: 150px;
+}
+
+.carrinho{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f15a4a;
+    margin: 30px;
+}
+
+ul .list-group-item{
+    margin-top: 30px;
+    background-color: #f5cedb;
+    border: none;
 }

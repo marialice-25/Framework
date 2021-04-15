@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de compras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet"  type="text/css" href="style.css">
+</head>
+<body>
+    <h3>
+        CARRINHO DE COMPRAS
+    </h3>
+    <div>
+        <h3>Adicionar produtos fora do estoque</h3>
+    <div class="container">
+             <form id="Lista">
+                <div class="input-group mb-3">
+                    <input type="text" placeholder="Adicione um novo produto" name="geral" class="form-control">
+                    <button class="botao1" required type="submit" name="insere">INSERIR</button><span></span>
+                    <input type="number" hidden name="id"> 
+                    <input type="checkbox" hidden name="state"> <br>
+                </div>
+                <div class="botoes">
+                    <div class="buttons">
+                        <button class="botao5" required type="submit" name="deleta">DELETAR</button><span></span>
+                        <button class="botao4" required type="submit" name="incrementa">INCREMENTAR</button><span></span>
+                        <button class="botao3" required type="submit" name="pesquisa">PESQUISAR</button>
+                    </div>
+                </div>
+                <ul class="list-group">
+                    </ul>
+                </form>
+
+    </div>
+    <h3>Produtos disponíveis</h3>
+    <div class="container2">
+        <div class="carrinho">
+            <div>
+                <h4>Bolo de cenoura com chocolate <button value="1" class="botao2">INSERIR</button></h4>
+                <p>12,50</p>
+            </div>
+            <div>
+                <h4>Cone recheado de Nuttela <button value="2" class="botao2">INSERIR</button></h4>
+                <p>9,00</p>
+            </div>
+            <div>
+                <h4>Red Velvet Fatia <button value="3" class="botao2">INSERIR</button></h4>
+                <p>15,50</p>
+            </div>
+            <div>
+                <h4>Pudim de leite condensado <button value="4" class="botao2">INSERIR</button></h4>
+                <p>9,90</p>
+            </div>
+            <div>
+                <h4>Romeu e Julieta <button value="5" class="botao2">INSERIR</button></h4>
+                <p>9,90</p>
+            </div>
+            <div>
+                <h4>Bolo de Paçoca <button value="6" class="botao2">INSERIR</button></h4>
+                <p>11,50</p>
+            </div>
+            <div>
+                <h4>Palha Italiana <button value="7" class="botao2">INSERIR</button></h4>
+                <p>6,00</p>
+            </div>
+            <div>
+                <h4>Bolo caseiro de laranja <button value="8" class="botao2">INSERIR</button></h4>
+                <p>8,90</p>
+            </div>
+        </div>
+</div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="Compras.js"></script>
+</body>
+</html>
