@@ -1,5 +1,7 @@
 
 
+
+
 $('#Lista').submit(function(event) {
     event.preventDefault();
  
@@ -49,32 +51,26 @@ function deleteItem(id) {
     localStorage.setItem('itens', JSON.stringify(list));
 }
 
-function update(id, text, state) {
-    const list = getAllTodos();
-    const index = list.findIndex((geral) => geral.id == id);
+function Decrement(id) {
+    const index = list.findIndex((geral) => geral.id == id) ;
+    list[index].amount--;
+    if(list[index].amount) deleteItem(id);
+}
 
-    if(index != -1) {
-        list[index] = {id, text, state};
-    }
+function Increment(id) {
+    const index = list.findIndex((geral) => geral.id == id) ;
+    list[index].amount++;
+    if(list[index].amount) save(id);
+}
 
-    localStorage.setItem('itens', JSON.stringify(list));
+function Search(text){
+   return list.filter(geral => geral.text.includes("text"));  
 } 
 
 function Deletar(event) {
     deleteItem(event.target.value);
     loadItems();
 }
-
-function Incrementar(event) {
-    const geral = getById(event.target.value);
-
-    const lista = document.getElementById('Lista');
-    const elements = lista.getElementsByTagName('input');
-
-    elements.id.value = geral.id;
-    elements.geral.value = geral.text;
-}
-
 
 function todoChecked(event) {
     event.target.checked;
@@ -86,7 +82,8 @@ function render(id, text, state = false) {
             <input type="checkbox" ${state ? 'checked':  ''} />
             ${text}
             <button value="${id}" class="botao5" type="submit" name="deleta">DELETAR</button>
-            <button value="${id}" class="botao4" type="submit" name="incrementa">INCREMENTAR</button>
+            <button value="${id}" class="botao4" type="submit" name="incrementa">+</button>
+            <button value="${id}" class="botao4" type="submit" name="decrementa">-</button>
         </li>
     `);
 }
