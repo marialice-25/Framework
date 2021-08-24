@@ -21,32 +21,28 @@ const doces = [
 
   constructor(props) {
     super(props);
-    this.state = ({Nome: '' })
-    this.Idade = ({Idade: '' })
     this.descricao = ({descricao: '' })
   }
 }
 
-mudar(nm, id, desc){
-  this.setState({Nome: nm});
-  this.setState({Idade: id});
+mudar(desc){
   this.setState({descricao: desc});
 }
 
-function App() {
+render() {
   return (
     <div className="App">
       <h1>DOCES PELO MUNDO</h1>
       <p>
         {
           doces.map((item, index) =>
-            <p key={index} onClick={() => descricao(item.doce, item.desc)}><button>{item.doce}</button></p>)
+            <p key={index} onClick={() => mudar()</p>)
         }
       </p>
       <div>
         <h1>PERFIL</h1>
-        <p>Meu nome é {this.state.Nome}</p>
-        <p>MInha idade é  {this.state.Idade}</p>
+        <p><Nome/>
+        <Idade texto="17 anos de idade"/></p>
         <p>
         <img src={img} alt="Os melhores doces" border="3px" width="300px" height="250px"></img>
         <img src={img2} alt="Japoneses" border="3px" width="300px" height="250px"></img>
