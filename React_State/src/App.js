@@ -2,6 +2,8 @@ import './App.css';
 import img from './doce.png';
 import img2 from './jap.png';
 
+export default class Doces extends React.Component{
+  
 const Nome = () => <h4>Maria Alice Dias</h4>
 const Idade = ({texto}) => <p>{texto}</p>
 
@@ -17,6 +19,20 @@ const doces = [
   { doce: "Açaí", desc: "Amazonas" },
   { doce: "Petit Gateau", desc: "França" }]
 
+  constructor(props) {
+    super(props);
+    this.state = ({Nome: '' })
+    this.Idade = ({Idade: '' })
+    this.descricao = ({descricao: '' })
+  }
+}
+
+mudar(nm, id, desc){
+  this.setState({Nome: nm});
+  this.setState({Idade: id});
+  this.setState({descricao: desc});
+}
+
 function App() {
   return (
     <div className="App">
@@ -29,8 +45,8 @@ function App() {
       </p>
       <div>
         <h1>PERFIL</h1>
-        <p><Nome/>
-        <Idade texto="17 anos de idade"/></p>
+        <p>Meu nome é {this.state.Nome}</p>
+        <p>MInha idade é  {this.state.Idade}</p>
         <p>
         <img src={img} alt="Os melhores doces" border="3px" width="300px" height="250px"></img>
         <img src={img2} alt="Japoneses" border="3px" width="300px" height="250px"></img>
