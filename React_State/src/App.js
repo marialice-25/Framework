@@ -1,8 +1,8 @@
-import './App.css';
-import img from './doce.png';
-import img2 from './jap.png';
 
-export default class Doces extends React.Component{
+import  React from 'react';
+
+
+export default class App extends React.Component{
   
 const Nome = () => <h4>Maria Alice Dias</h4>
 const Idade = ({texto}) => <p>{texto}</p>
