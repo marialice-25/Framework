@@ -1,60 +1,124 @@
-
-import  React from 'react';
-
+import React from 'react'
+import IMC from './components/IMC/IMC';
+import './App.css';
 
 export default class App extends React.Component{
+
+    constructor(props){
+      super(props)
+      this.state = {
+        desc: '',
+        nome: '',
+        sexo: null,
+        idade: null,
+        peso: null,
+        altura: null,
+      }
+    }
+
+      click = (doce, desc) => {
+      this.setState({
+        desc: `O ${doce} é tradicional em ${desc}`
+      })
+    }
+
   
-const Nome = () => <h4>Maria Alice Dias</h4>
-const Idade = ({texto}) => <p>{texto}</p>
+    changeNome(novoNome) {
+      this.setState({ nome: novoNome });
+    }
+    changeSexo(novaSexo) {
+      this.setState({ sexo: novaSexo });
+    }
+  
+    changeIdade(novaIdade) {
+      this.setState({ idade: novaIdade });
+    }
+  
+    changePeso(novoPeso) {
+      this.setState({ peso: novoPeso });
+    }
+  
+    changeAltura(novoAltura) {
+      this.setState({ altura: novoAltura });
+    }
 
-const descricao = (doce, desc) => {
-  return alert(`O doce ${doce} é tradicional em ${desc}`)
-  }
+    render(){
 
-const doces = [
-  { doce: "Bala Baiana", desc: "Bahia" },
-  { doce: "Mocotó", desc: "Minas Gerais" },
-  { doce: "Mochi", desc: "Japão" },
-  { doce: "Marshmallow", desc: "EUA" },
-  { doce: "Açaí", desc: "Amazonas" },
-  { doce: "Petit Gateau", desc: "França" }]
+      const doces = [
+        { doce: "Bala Baiana", desc: "Bahia" },
+        { doce: "Mocotó", desc: "Minas Gerais" },
+        { doce: "Mochi", desc: "Japão" },
+        { doce: "Marshmallow", desc: "EUA" },
+        { doce: "Açaí", desc: "Amazonas" },
+        { doce: "Petit Gateau", desc: "França" }]
 
-  constructor(props) {
-    super(props);
-    this.descricao = ({descricao: '' })
-  }
+      const { nome, sexo, idade, peso, altura } = this.state;
+
+      return (
+        <div>
+          <h1>DOCES PELO MUNDO</h1>
+          <p>
+            {
+              doces.map((item, index) =>
+                <p key={index} onClick={() => this.click(item.doce, item.desc)}>
+                  <button>{item.doce}</button>
+              </p>
+              )
+            }
+          </p>
+          <p>
+           {this.state.desc}
+          </p>
+          <div>
+        <h1>DADOS PARA CALCULO DE IMC:</h1>
+        <div>
+          <label>Nome:</label>
+          <input
+            onChange={(e) => this.changeNome(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label>Sexo:</label>
+          <input class="a" type="radio" name="sexo" value="Feminino" onChange={(e) => this.changeSexo(e.target.value)} /> Feminino
+          <input class="a" type="radio" name="sexo" value="Masculino" onChange={(e) => this.changeSexo(e.target.value)} /> Masculino
+        </div>
+
+        <div>
+          <label>Idade:</label>
+          <input
+            onChange={(e) => this.changeIdade(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label>Peso:</label>
+          <input
+            onChange={(e) => this.changePeso(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label>Altura:</label>
+          <input
+            onChange={(e) => this.changeAltura(e.target.value)}
+          />
+        </div>
+
+        <div id="resultado-formulario">
+          <div>Nome: {nome}</div>
+          <div>Sexo: {sexo}</div>
+          <div>Idade: {idade}</div>
+          <div>Peso: {peso}</div>
+          <div>Altura: {altura}</div>
+        </div>
+
+        <IMC sexo={sexo} peso={peso} altura={altura} />
+      </div >
+        </div>
+
+      )
+    }
 }
 
-mudar(desc){
-  this.setState({descricao: desc});
-}
 
-render() {
-  return (
-    <div className="App">
-      <h1>DOCES PELO MUNDO</h1>
-      <p>
-        {
-          doces.map((item, index) =>
-            <p key={index} onClick={() => mudar()</p>)
-        }
-      </p>
-      <div>
-        <h1>PERFIL</h1>
-        <p><Nome/>
-        <Idade texto="17 anos de idade"/></p>
-        <p>
-        <img src={img} alt="Os melhores doces" border="3px" width="300px" height="250px"></img>
-        <img src={img2} alt="Japoneses" border="3px" width="300px" height="250px"></img>
-        </p>
-        <p>
-          <a href="https://viagemeturismo.abril.com.br/materias/do-brigadeiro-ao-quindim-veja-fotos-de-14-doces-tipicamente-brasileiros/">Clique aqui e veja os doces tradicionais do Brasil</a>
-          <a href="https://youtu.be/4g0DrGF-5xs">Assista já esse vídeo</a>
-        </p>
-      </div>
-    </div>
-    
-  );
-}
-
-export default App;
