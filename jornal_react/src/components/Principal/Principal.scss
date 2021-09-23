@@ -1,0 +1,75 @@
+@import "../Components.scss";
+
+.App {
+    display: flex;
+    height: 100%;
+    #jornal {
+        background-color: rgb(153, 14, 218);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        #titulo{
+            height:9%;
+            padding-top: 5px;
+            background-color: rgb(153, 14, 218);
+            color: rgb(221, 146, 255);
+        }
+        #container {
+            display: flex;
+            flex-direction: row;
+            height: 90%;
+
+            #ler{
+                display: flex;
+                width: 30%;
+                justify-content: center;
+            }
+
+            .tit{
+               color: rgb(153, 14, 218);
+            }
+
+            #noticias {
+                .sessao {
+                    display: flex;
+                    flex-direction: column;
+                    width: 150%;
+
+                    .noticias {
+                        display: flex;
+                        justify-content: center;
+                        padding: 20px;
+                    }
+                }
+
+                #saude {
+                    background-color: $saude;
+                }
+                #gastronomia {
+                    background-color: $gastronomia;
+                }
+                #astrologia {
+                    background-color: $astrologia;
+                }
+                
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+                color: rgb(227, 191, 248);
+                padding-top: 13px;
+                background-color: rgb(221, 146, 255);
+
+                #sessoes {
+                    display: flex;
+                    font-size: 10px;
+                    flex-direction: column;
+                    height: 100%;
+                    width: 100%;
+                    overflow-x: scroll;
+                    overflow-y: hidden;  
+                }
+            }
+        }
+    }
+}
