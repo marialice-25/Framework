@@ -1,7 +1,0 @@
-
-Integrantes: Maria Alice Dias Torres
-Lutz D'Àvila Ferreira Keppel
-
-Realizar essa tarefa nos permitiu ter uma visão melhor do processo de desenvolvimento, tanto na fase de teste quanto na compreensão do próprio código efetuado.
-Para que um problema do código seja resolvido, é preciso analisar detalhadamente cada linha, e por isso nós conseguimos entender muitos aspectos da sintaxe do 
-JavaScript que não entendíamos anteriormente. 
